@@ -1,10 +1,10 @@
 FROM ubuntu:jammy
 
 ARG GO_VERSION=1.27.3
-ARG CODEX_VERSION=0.166.0
+ARG CODEX_VERSION=0.167.0
 
 RUN apt-get update -y && \
-    apt-get install -y curl wget git unzip zip ca-certificates build-essential dnsutils telnet vim ripgrep fzf netcat-openbsd jq \
+    apt-get install -y curl iproute2 ffmpeg wget git unzip zip ca-certificates build-essential dnsutils telnet vim ripgrep fzf netcat-openbsd jq \
         openjdk-8-jdk openjdk-11-jdk openjdk-17-jdk openjdk-21-jdk maven \
         imagemagick \
         python3 python3-pip python3-venv && \
